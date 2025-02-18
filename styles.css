@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Zen+Antique+Soft&display=swap');
+
+* {
+    font-family: "Zen Antique Soft", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shippori-mincho-regular {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+body {
+  background: url(TOP.jpg);
+  background-repeat: repeat;
+}
+
+.judul, .judul2, .judul3, .judul4, .footer {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BAGIAN TOP */
+.top {
+  width: auto;
+  position: relative;
+}
+.top img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0; /* Menghapus margin */
+  padding: 0; /* Menghapus padding */
+}
+
+#button {
+  justify-content: center;
+  display: flex;
+  max-width: 990px;
+  margin: 0; /* Menghapus margin */
+  padding: 0; /* Menghapus padding */
+}
+
+.judulutama {
+  position: absolute;
+  top: 120px;
+  left: 175px;
+  margin: 0; /* Menghapus margin */
+  padding: 0; /* Menghapus padding */
+}
+
+.box img {
+  display: block;
+  width: 100%;
+  margin: 0; /* Menghapus margin */
+  padding: 0; /* Menghapus padding */
+}
+
+#button img {
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+  padding-right: auto;
+  padding-left: auto;
+  padding-bottom: auto;
+}
+
+.box :hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+/* slide auto */
+.slideauto {
+  display: none;
+}
+
+/* Menambahkan transisi pada gambar agar animasi halus */
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;  /* Transisi halus saat gambar berubah */
+}
+
+/* Gaya untuk kontainer slider */
+.slideshow-container {
+  max-width: 100%;  /* Slider dapat menggunakan seluruh lebar elemen induk */
+  position: relative;  /* Agar posisi tombol prev/next bisa ditata */
+  margin: auto;
+
+}
+
+/* Untuk mengatur transisi gambar */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* BAGIAN ISI 1 */
+.isi1 {
+  background-image: url(img/bg1.png);
+  width: 990px;
+  float: center;
+  display: block;
+  padding-bottom: 50px;
+
+}
+
+.judul {
+  position: absolute;
+  padding-left: 215px;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.background-color {
+  float: center;
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
+.slideshow-container1{
+  max-width: 100%;  /* Slider dapat menggunakan seluruh lebar elemen induk */
+  position: relative;  /* Agar posisi tombol prev/next bisa ditata */
+  margin: auto;
+  padding-top: 200px;
+}
+/* Kontainer untuk kedua kupon */
+.kupon-container1 {
+  display: flex;
+  justify-content: center; /* Menyusun gambar agar berada di tengah secara horizontal */
+  max-width: 990px;
+  margin: 0 auto; /* Menjaga kontainer agar tetap di tengah */
+}
+
+/* Box untuk kupon */
+#kupon1-1, #kupon1-2 {
+  display: flex;
+  justify-content: center; /* Agar gambar berada di tengah dalam setiap box */
+  margin: 0 20px; /* Memberikan jarak antar gambar (lebih lebar dari sebelumnya) */
+  margin-top: 50px;
+}
+
+/* Gambar di dalam box1 dan box2 */
+.box1 img, .box2 img {
+  width: 100%; /* Membuat gambar mengisi seluruh lebar kotak */
+  max-width: 400px; /* Membuat gambar sedikit lebih besar */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+/* Efek hover pada box1 dan box2 */
+.box1:hover, .box2:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* slide manual1 */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #000000;
+  padding-top: 65px;
+  padding-left: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.numbertext {
+  color: #ffffff;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #454b1b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #c6bdbd;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@media only screen and (max-width: 990px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+
+
+/* BAGIAN ISI 2 */
+.isi2 {
+  background-image: url(img/bg2.png);
+  float: center;
+  max-width: 990px;
+  width: 100%;
+  float: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+
+}
+
+.judul2 {
+  position: absolute;
+  padding-left: 215px;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.background-color2 {
+  float: center;
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
+.slideshow-container2 {
+  max-width: 100%;  /* Slider dapat menggunakan seluruh lebar elemen induk */
+  position: relative;  /* Agar posisi tombol prev/next bisa ditata */
+  padding-top: 200px;
+  margin: auto;
+}
+
+
+.text2 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 20px;
+}
+.text2 p{
+  padding-top: 60px;
+}
+.kupon-container1 {
+  display: flex;
+  justify-content: center; /* Menyusun gambar agar berada di tengah secara horizontal */
+  max-width: 990px;
+  margin: 0 auto; /* Menjaga kontainer agar tetap di tengah */
+}
+
+/* Box untuk kupon */
+#kupon2 {
+  display: flex;
+  justify-content: center; /* Agar gambar berada di tengah dalam setiap box */
+  margin: 0 20px; /* Memberikan jarak antar gambar (lebih lebar dari sebelumnya) */
+  margin-top: 50px;
+}
+
+/* Gambar di dalam box1 dan box2 */
+.box2 img {
+  width: 100%; /* Membuat gambar mengisi seluruh lebar kotak */
+  max-width: 500px; /* Membuat gambar sedikit lebih besar */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+/* Gaya untuk tombol prev/next */
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+  
+}
+
+.prev2 {
+  left: 0;
+}
+
+.next2 {
+  right: 0;
+}
+
+.prev2:hover, .next2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dot2 {
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #454b1b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+/* Slideshow specific styles */
+.mySlides2 {
+  display: none;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media only screen and (max-width: 990px) {
+  .judul2 {
+    font-size: 36px;  /* Ukuran font judul lebih kecil di layar kecil */
+  }
+
+  .background-color2 {
+    width: 100%; /* Agar lebih responsif */
+    padding-bottom: 30px;
+  }
+
+  .mySlides2 img {
+    width: 100%;  /* Menjaga gambar agar sesuai dengan ukuran layar */
+  }
+
+  .prev2, .next2 {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .dot2 {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* Animasi fade untuk gambar */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* BAGIAN ISI 3 */
+.isi3 {
+  background-image: url(img/bg1.png);
+  float: center;
+  width: 990px;
+  float: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-bottom: 50px;
+
+}
+
+.judul3 {
+  position: absolute;
+  padding-left: 215px;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.background-color3 {
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  margin-top: 0;
+  position: relative;
+}
+.slideshow-container3 {
+  max-width: 100%;  /* Slider dapat menggunakan seluruh lebar elemen induk */
+  position: relative;  /* Agar posisi tombol prev/next bisa ditata */
+  padding-top: 200px;
+  margin: auto;
+}
+.numbertext3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+.text3 {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 20px;
+  padding-top: 50px;
+}
+
+.kupon-container3 {
+  display: flex;
+  justify-content: center; /* Menyusun gambar agar berada di tengah secara horizontal */
+  max-width: 990px;
+  margin: 0 auto; /* Menjaga kontainer agar tetap di tengah */
+}
+
+/* Box untuk kupon */
+#kupon3-1, #kupon3-2 {
+  display: flex;
+  justify-content: center; /* Agar gambar berada di tengah dalam setiap box */
+  margin: 0 20px; /* Memberikan jarak antar gambar (lebih lebar dari sebelumnya) */
+  margin-top: 50px;
+}
+
+/* Gambar di dalam box1 dan box2 */
+.box3-1 img, .box3-2 img {
+  width: 100%; /* Membuat gambar mengisi seluruh lebar kotak */
+  max-width: 400px; /* Membuat gambar sedikit lebih besar */
+  height: auto; /* Menjaga proporsi gambar */
+}
+.kupon-container3 a img {
+  margin-bottom: 1%;
+  transition: 0.6s;
+}
+
+.kupon-container3 a img:hover {
+  transform: scale(0.9);
+}
+/* Gaya untuk tombol prev/next */
+.prev3, .next3 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: 18px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+
+}
+
+.prev3 {
+  left: 0;
+}
+
+.next3 {
+  right: 0;
+}
+
+.prev3:hover, .next3:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot3 {
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #454b1b;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot3:hover, .dot3.active {
+  background-color: #717171;
+}
+
+/* Slideshow specific styles */
+.mySlides3 {
+  display: none;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media only screen and (max-width: 990px) {
+  .judul3 {
+    font-size: 36px;  /* Ukuran font judul lebih kecil di layar kecil */
+  }
+
+  .background-color3 {
+    width: 100%; /* Agar lebih responsif */
+    padding-bottom: 30px;
+  }
+
+  .mySlides3 img {
+    width: 100%;  /* Menjaga gambar agar sesuai dengan ukuran layar */
+  }
+
+  .prev3, .next3 {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .dot3 {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* Animasi fade untuk gambar */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* BAGIAN ISI 4 */
+.isi4 {
+  background-image: url(img/bg2.png);
+  width: 990px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  height: 1000px;
+}
+
+.judul4 {
+  position: absolute;
+  padding-left: 215px;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.background-color4 {
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  margin-top: 0;
+  position: relative;
+}
+.slideshow-container4 {
+  max-width: 100%;  /* Slider dapat menggunakan seluruh lebar elemen induk */
+  position: relative;  /* Agar posisi tombol prev/next bisa ditata */
+  padding-top: 200px;
+  margin: auto;
+}
+
+.text4 {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.kupon-container4 {
+  display: flex;
+  justify-content: center; /* Menyusun gambar agar berada di tengah secara horizontal */
+  max-width: 800px;
+  margin: 0 auto; /* Menjaga kontainer agar tetap di tengah */
+}
+
+/* Box untuk kupon */
+#kupon4-1, #kupon4-2 {
+  display: flex;
+  justify-content: center; /* Agar gambar berada di tengah dalam setiap box */
+  margin: 0 20px; /* Memberikan jarak antar gambar (lebih lebar dari sebelumnya) */
+}
+
+/* Gambar di dalam box1 dan box2 */
+.box4-1 img, .box4-2 img {
+  width: 100%; /* Membuat gambar mengisi seluruh lebar kotak */
+  max-width: 400px; /* Membuat gambar sedikit lebih besar */
+  height: auto; /* Menjaga proporsi gambar */
+}
+.kupon-container4 a img {
+  margin-bottom: 1%;
+  transition: 0.6s;
+}
+
+.kupon-container4 a img:hover {
+  transform: scale(0.9);
+}
+/* Gaya untuk tombol prev/next */
+.prev4, .next4 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 3px;
+
+}
+
+.prev4 {
+  left: 0;
+}
+
+.next4 {
+  right: 0;
+}
+
+.prev4:hover, .next4:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slideshow specific styles */
+.mySlides4 {
+  display: none;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media only screen and (max-width: 990px) {
+  .judul4 {
+    font-size: 36px;  /* Ukuran font judul lebih kecil di layar kecil */
+  }
+
+  .background-color4 {
+    width: 100%; /* Agar lebih responsif */
+    padding-bottom: 30px;
+  }
+
+  .mySlides4 img {
+    width: 100%;  /* Menjaga gambar agar sesuai dengan ukuran layar */
+  }
+
+  .prev4, .next4 {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .dot4 {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+/* Animasi fade untuk gambar */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.footer{
+  display: block;
+  width: 100%;
+  max-width: 990px;
+  max-height: 690px;
+  margin-top: 5%;
+  padding-bottom: 8%;
+  margin-bottom: 0;
+  background-image: url(img/footer/bgfooter.png);
+}
+.tiketpesawat {
+  display: flex;
+  list-style: none;
+  max-width: 920px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+.kupon1{
+  padding-top: 12%;
+  padding-bottom: 1%;
+}
+.kupon1 a img{
+  padding-left: 25%;
+  margin-bottom: 1%;
+  transition: 0.6s;
+}
+.kupon1 a img:hover{
+  transform: scale(0.9);
+}
+.textkupon{
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 22px;
+  line-height: 38px;
+  font-family: "Zen Antique", serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+#jal{
+  padding-left: 8%;
+}
+#jal a img{
+  width: 390px;
+  transition: 0.6s;
+}
+#jal a img:hover{
+  transform: scale(0.9);
+}
+#ana a img{
+  width: 390px;
+  transition: 0.6s;
+}
+#ana a img:hover{
+  transform: scale(0.9);
+}
+.kupon2 a img{
+  padding-left: 25%;
+  margin-bottom: 1%;
+  transition: 0.6s;
+}
+.kupon2 a img:hover{
+  transform: scale(0.9);
+}
